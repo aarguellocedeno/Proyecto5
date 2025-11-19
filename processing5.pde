@@ -50,7 +50,6 @@ class Figura {
     s = 50;
     
     if (tipo.equals("circulo")) {
-      // Círculos rojos: representan duración del sueño
       x =width * 0.25;
       y = height + 50;
       float brillo = map(duracion, 5, 10, 80, 255);
@@ -58,14 +57,12 @@ class Figura {
       vy = -4;
     }
     else if (tipo.equals("cuadrado")) {
-      // Cuadrados azules: representan REM
       x = width * 0.5;
       y = height + 50;
       c = color(0, 120, 255);
       vy = map(rem, 15, 30, -10, -2);
     }
     else if (tipo.equals("triangulo")) {
-      // Triángulos verdes: representan deep sleep
       x = width * 0.75;
       y = height + 50;
       c = color(0, 255, 120);
@@ -114,3 +111,4 @@ class Figura {
     osc.send(m, pd);
   }
 }
+
